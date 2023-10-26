@@ -1,23 +1,26 @@
 #include "main.h"
+#include <stdio.h>
+
 /**
-  * _pow_recursion - function name
-  * @x: parameter 1
-  * @y: parameter 2
-  * Return: value of a given number passed to the function
-  */
-
-
-int _pow_recursion(int x, int y)
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
 {
+    int r;
 
-if (y < 0)
-        return (-1);
-
-else if (y == 0)
-        return (1);
-
-else
-        return (x * _pow_recursion(x, (y - 1)));
-
-return (0);
+    r = _pow_recursion(1, 10);
+    printf("%d\n", r);
+    r = _pow_recursion(1024, 0);
+    printf("%d\n", r);
+    r = _pow_recursion(2, 16);
+    printf("%d\n", r);
+    r = _pow_recursion(5, 2);
+    printf("%d\n", r);
+    r = _pow_recursion(5, -2);
+    printf("%d\n", r);
+    r = _pow_recursion(-5, 3);
+    printf("%d\n", r);
+    return (0);
 }
